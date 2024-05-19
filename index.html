@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>JS core quest - 1</title>
+</head>
+<body>
+    <main class="main">
+        <div class="field">
+          <div class="field-container">
+            <input type="text" placeholder="Search repo" id="search" class="field-search">
+            <div id="list" class="field-list"></div>
+          </div>
+          <div class="field-bottom"></div>
+        </div>
+      </main>
+
+      <template id="card">
+        <div class="card">
+          <div class="card-text">
+            <span class="card-name">Name: react</span>
+            <span class="card-owner">Owner: facebook</span>
+            <span class="card-stars">Stars: 145231</span>
+          </div>
+          <button class="card-button" id="delete-button" type="button"></button>
+        </div>
+      </template>
+    <script src="script.js"></script>
+</body>
+</html>
