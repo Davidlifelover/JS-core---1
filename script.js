@@ -33,7 +33,7 @@ const getRepos = async (request) => {
     }
   })
       .then(response => {
-        if (response) {
+        if (response.ok) {
           response.json().then(repos => {
             list.innerHTML = ''
             const items = repos.items.slice(0, 5)
@@ -50,12 +50,12 @@ const getRepos = async (request) => {
             }
           })
         } else {
-          list.innerHTML = '<p class="no-results">Try again...</p>'
+          list.innerHTML = ''
         }
       })
 }
 
-const debounceGetRepos = debounce(getRepos, 100)
+const debounceGetRepos = debounce(getRepos, 3000)
 
 searchField.addEventListener('input', () => {
   if (searchField.value[0] === ' ') {
